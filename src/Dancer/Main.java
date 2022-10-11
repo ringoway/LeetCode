@@ -17,6 +17,7 @@ public class Main {
         for (Dancer d : discotheque) {
             d.dance();// полиморфный вызов метода
 
+
         }
     }
 }
