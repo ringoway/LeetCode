@@ -1,6 +1,6 @@
 package Main;
 
-public class Films {
+public class Films implements Comparable<Films> {
     private String name;
     private int year;
 
@@ -11,5 +11,10 @@ public class Films {
 
     public String toString(){
         return name +", "+year;
+    }
+
+    @Override
+    public int compareTo(Films f) {
+        return this.year-f.year;
     }
 }
