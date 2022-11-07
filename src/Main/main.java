@@ -1,5 +1,8 @@
 package Main;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,8 +18,15 @@ public class main {
 
         Collections.sort(filmsList);
 
-        for(Films a: filmsList){
-            System.out.println(a);
+        try{
+            FileOutputStream fos = new FileOutputStream("file.bin");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(filmsList);
+            fos.close();
+            }
+        catch (IOException e) {
+            throw new RuntimeException(e);
         }
+
     }
 }
