@@ -1,6 +1,8 @@
 package Main;
 
-public class Films implements Comparable<Films> {
+import java.io.Serializable;
+
+public class Films implements Comparable<Films>, Serializable {
     private String name;
     private int year;
 

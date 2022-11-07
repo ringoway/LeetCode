@@ -22,7 +22,7 @@ public class main {
             FileOutputStream fos = new FileOutputStream("file.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(filmsList);
-            oos.close();
+            fos.close();
             }
         catch (IOException e) {
             throw new RuntimeException(e);
