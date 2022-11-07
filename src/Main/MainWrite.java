@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class main {
+public class MainWrite {
     public static void main(String[] args) {
         List<Films> filmsList = new ArrayList<>();
         filmsList.add(new Films("Test World", 1969));
