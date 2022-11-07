@@ -12,7 +12,10 @@ public class MainRead {
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             List<Films> filmsList = (ArrayList<Films>) ois.readObject();
-            System.out.println(Arrays.toString(new List[]{filmsList}));
+
+            for (Films o: filmsList){
+                System.out.println(o);
+            }
 
             ois.close();
         } catch (IOException | ClassNotFoundException e) {
